@@ -8,49 +8,131 @@
   :root { --bg: #0e0f14; --text: #eceae4; --muted: #b7bec7; --accent: #ffb020; }
   body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.65 system-ui, "Segoe UI", sans-serif; }
   main { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
-  h1 { letter-spacing: 0.04em; } h2 { margin-top: 32px; font-size: 20px; }
-  p, li { color: var(--muted); } a { color: var(--accent); }
+  h1 { letter-spacing: 0.04em; } h2 { margin-top: 32px; font-size: 20px; } h3 { margin-top: 24px; font-size: 17px; }
+  p, li, td, th { color: var(--muted); } a { color: var(--accent); }
+  .note { border-left: 3px solid var(--accent); padding: 4px 14px; margin: 0 0 24px; }
+  table { border-collapse: collapse; width: 100%; } th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #2a2d38; vertical-align: top; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Privacy policy</h1>
-  <p>Last updated: 29 September 2026. This policy covers the Strongpoint game and its account service.</p>
 
-  <h2>What we collect</h2>
-  <ul>
-    <li><strong>From Google sign-in:</strong> your Google account identifier, email address and display name. We ask
-    Google only for the basic <em>openid</em>, <em>email</em> and <em>profile</em> permissions. We never see your
-    Google password.</li>
-    <li><strong>From playing:</strong> your in-game callsign, experience and level, match statistics (such as kills,
-    deaths and matches played), your friends list, and invite codes you have redeemed.</li>
-    <li><strong>Technical:</strong> the network address your game connects from, kept in server logs for security and
-    troubleshooting.</li>
-  </ul>
+<h1>Privacy policy</h1>
 
-  <h2>How we use it</h2>
-  <p>To sign you in, decide whether your account has playtest access, keep your progress and statistics, show your
-  friends list, and keep the service secure. We do not sell your data, we do not use it for advertising, and this
-  site uses no trackers or cookies.</p>
+<p>Last updated: 8 October 2026. This policy covers the STRONGPOINT game, its account service, its download service and this website.</p>
 
-  <h2>Where it is kept</h2>
-  <p>On servers run by the Strongpoint development team. Google processes sign-in under its own privacy policy.</p>
+<div class="prose">
 
-  <h2>How long</h2>
-  <p>For as long as your account exists. Server logs are kept for up to 30 days.</p>
+<h2>Who we are</h2>
+<p>The controller of your data is Phillip David Hinsley, an individual in Carnesville, Georgia, United States ("we"). You can reach us at <a href="mailto:philliphinsley@gmail.com">philliphinsley@gmail.com</a>.</p>
 
-  <h2>Your choices</h2>
-  <p>You can ask us to show you, correct, or delete your data at any time by emailing
-  <a href="mailto:philliphinsley@gmail.com">philliphinsley@gmail.com</a>. You can also remove Strongpoint's access
-  to your Google account at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</p>
+<h2>The short version</h2>
+<ul>
+  <li>To play online you sign in with Google. We keep your Google account identifier and e-mail address, a callsign you choose, and your progress.</li>
+  <li>We keep your match statistics, friends list and the results of matches you played.</li>
+  <li>If you send a bug report, it includes the end of your game log, details of your computer and optionally a screenshot, and it goes to our team's Discord.</li>
+  <li>We log the network address you connect from for up to 30 days.</li>
+  <li>We do not sell your data, show advertising, or use trackers or cookies on this website.</li>
+  <li>You can export or delete your data yourself in the game (Options, ACCOUNT, from version 1.99.3 on), or ask us by e-mail.</li>
+</ul>
 
-  <h2>Children</h2>
-  <p>Strongpoint is not directed at children under 13, and we do not knowingly collect their data.</p>
+<h2>What we collect, and why</h2>
 
-  <h2>Changes</h2>
-  <p>We will update this page if this policy changes, and change the date at the top.</p>
+<h3>1. Your account</h3>
+<p>When you sign in with Google, Google tells our service who you are. We store:</p>
+<ul>
+  <li>your <strong>Google account identifier</strong> (a long number Google assigns, called the "subject") and the <strong>e-mail address</strong> on that account. We require it to be a verified address. We ask Google only for the basic <em>openid</em>, <em>email</em> and <em>profile</em> permissions, and we never see your Google password. The account service does not store your Google display name or profile picture;</li>
+  <li>your <strong>callsign</strong>, the name you pick (up to 16 characters, unique). Other players see it;</li>
+  <li>when the account was created and when it was last seen, and your online status (friends can see whether you are online);</li>
+  <li>a <strong>sign-in session</strong>: a random token that keeps you signed in for up to 30 days. We store only a one-way hash (SHA-256) of the token, not the token itself.</li>
+</ul>
+<p><em>Why:</em> to sign you in, to decide whether your account has playtest access, to give you a name, and to run the service. <em>Basis:</em> performing the service you asked for, and our legitimate interest in running it securely. </p>
 
-  <p><a href="index.html">Back to Strongpoint</a></p>
+<h3>2. Playtest access and invite codes</h3>
+<p>We keep a list of the accounts allowed to play (Google identifier, e-mail, how access was granted and when). When you redeem an invite code we record which code, which account and when. Invite codes themselves are stored hashed, with a printable form for our team.</p>
+
+<h3>3. Progress, statistics and friends</h3>
+<ul>
+  <li>Experience points and level; counts of kills, deaths, headshots, relays taken, rounds won, missions completed and matches played;</li>
+  <li>the <strong>result of each match</strong> you took part in (a match identifier, the experience awarded, a short detail, who posted it and when);</li>
+  <li>your <strong>friends list</strong>, friend requests and the dates they began.</li>
+</ul>
+<p><em>Why:</em> to keep your progress, show it to you and to your friends, and to credit the matches you play.</p>
+
+<h3>4. Bug reports</h3>
+<p>If you press BUG REPORTS and send a report, we receive: the title and text you wrote; your game version, game mode, whether you were in a match, the server, graphics quality, resolution, graphics card, processor, memory, operating system and the time; the <strong>last part of your game log file</strong> (up to 300 KB); and a <strong>screenshot</strong> if you attach one (up to 8 MB). The log can contain file paths from your computer, which may include your Windows user name. Please do not put passwords, other people's personal data or anything confidential in a report or screenshot.</p>
+<p>The report is posted by our service, through a webhook, to a private forum channel on <strong>Discord</strong>, where our team reads it. Discord is a separate company with its own privacy policy. Our service also keeps a record of each report (who sent it, when, its title and size, and the Discord message identifier or an error).</p>
+
+<h3>5. Downloads</h3>
+<p>When you download the game, we record a download ticket: which invite code or signed-in account was used, the <strong>network (IP) address</strong>, the game version and file, how much was sent, and the times. We blank the address after 30 days.</p>
+
+<h3>6. Servers and logs</h3>
+<ul>
+  <li>Our account and download service keeps <strong>request logs</strong> that include the network address of the request and the path requested. Secrets such as download links are removed from the log lines. We keep these logs for up to 30 days.</li>
+  <li>When you join a game server, the server sees your network address, your callsign and your account identifier. A dedicated server asks our service to confirm which account sits in which seat, so that matches are credited to the right people; that confirmation is held in memory for up to 12 hours.</li>
+  <li>The list of running game servers is held in memory and contains no personal data about players.</li>
+</ul>
+
+<h3>7. On your computer</h3>
+<p>The game stores your settings, key bindings, saved loadouts and sign-in session on your computer, and writes a log file to <code>%USERPROFILE%\AppData\LocalLow\Strongpoint\Strongpoint</code>. These stay on your computer unless you send a bug report.</p>
+
+<h3>8. This website</h3>
+<p>This website sets no cookies and uses no analytics, trackers, advertising or external fonts. It is hosted on GitHub Pages, and GitHub, as host, may log visitors' network addresses under its own privacy statement. </p>
+
+<h3>9. If we move to Steam</h3>
+<p>We plan to release on Steam. If we do, Steam will give us your Steam identifier and we will check that you own the game. Before that happens we will update this policy with the details and tell players.</p>
+
+<h2>Who else sees your data</h2>
+<ul>
+  <li><strong>Google</strong> processes your sign-in under its own privacy policy. You can remove our access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  <li><strong>Discord</strong> receives bug reports, as above. The Discord community server is a separate relationship, under Discord's own terms.</li>
+  <li><strong>Tailscale</strong>: our account and download service is published to the internet through Tailscale's Funnel feature, so Tailscale's network carries that traffic. </li>
+  <li><strong>Hosting and backup providers.</strong> Our service runs on a server we operate. Copies of the account database, including any backups, are kept for at most 30 days.</li>
+  <li><strong>Other players</strong> see your callsign and, in matches, your level and actions. Friends see your online status.</li>
+  <li>We may disclose data if the law requires it. </li>
+</ul>
+<p>We do not sell personal data and we do not share it for advertising.</p>
+
+<h2>How long we keep it</h2>
+<table>
+  <thead><tr><th>Data</th><th>Kept</th></tr></thead>
+  <tbody>
+    <tr><td>Account, progress, friends, results</td><td>While your account exists, then until we delete it on request </td></tr>
+    <tr><td>Sign-in sessions</td><td>Up to 30 days each</td></tr>
+    <tr><td>Download tickets</td><td>Record kept; network address blanked after 30 days</td></tr>
+    <tr><td>Request logs</td><td>Up to 30 days</td></tr>
+    <tr><td>Bug reports</td><td>Our record of a report is anonymised when the account is deleted. The copy in Discord stays until our team deletes it.</td></tr>
+    <tr><td>Backups</td><td>Copies of the account database: at most 30 days.</td></tr>
+  </tbody>
+</table>
+
+<h2>Your rights and choices</h2>
+<p>You can ask us to: show you what we hold about you; correct it; delete it; give you a copy in a usable form; and stop using it for something you object to. Depending on where you live, you may have these rights by law (for example under the GDPR or the CCPA). </p>
+<p>From version 1.99.3 of the game on, you can do two of these yourself in the game. <strong>Options, ACCOUNT, EXPORT MY DATA</strong> saves everything the account service stores about you to a file in your Documents folder. <strong>Options, ACCOUNT, DELETE MY ACCOUNT</strong> erases your account. For anything else, with an older version of the game, or if you cannot sign in, e-mail <a href="mailto:philliphinsley@gmail.com">philliphinsley@gmail.com</a> from the address on your account, or tell us your callsign. We will reply within 14 calendar days.</p>
+<h3>What deleting your account does</h3>
+<ul>
+  <li><strong>Erased:</strong> your account (Google identifier, e-mail address, callsign, experience and statistics), every sign-in session, your friends and friend requests, your match results, your download records and your place on the allow list. You are signed out everywhere. Deletion takes effect at once and cannot be undone.</li>
+  <li><strong>Made anonymous:</strong> where another player's record points at you (who posted a result), the pointer is cleared; the e-mail address and Google identifier on an invite-code redemption are blanked; a bug-report record keeps only its time, size and Discord message number. Other players' experience, levels and results do not change.</li>
+  <li><strong>Not reached:</strong> a bug report you already sent is a post in our Discord channel, which our team removes by hand within 30 days of your request; backups taken before the deletion, until they are rotated out (at most 30 days); the server logs described above, until they expire; and your Google account, from which you can remove our access at myaccount.google.com/permissions.</li>
+  <li>Your callsign becomes free for others to take. Signing in again needs a new invite code and starts an empty account.</li>
+</ul>
+<p>You can stop playing at any time and remove our access in your Google account settings. You may complain to your data protection authority.</p>
+
+<h2>Security</h2>
+<p>Connections to the account service use HTTPS. Invite codes, download link secrets and sign-in session tokens are stored only as hashes. We limit who can reach the data. No system is perfectly secure. </p>
+
+<h2>Children</h2>
+<p>STRONGPOINT is not directed at children, and it depicts stylised violence. You must be at least 18 to create an account. We do not knowingly collect data from younger children. If you think we have, tell us and we will delete it.</p>
+
+<h2>Transfers and where it is stored</h2>
+<p>Our service runs in the United States. Google, Discord and Tailscale operate internationally. If you use the Game from another country, your data is sent to the United States.</p>
+
+<h2>Changes</h2>
+<p>If we change this policy we will change the date at the top and, for material changes, say so in the game's news card and on the download page.</p>
+
+</div>
+
+<p><a href="index.html">Back to Strongpoint</a></p>
 </main>
 </body>
 </html>
