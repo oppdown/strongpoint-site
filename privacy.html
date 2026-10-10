@@ -71,6 +71,7 @@
   <li>Our account and download service keeps <strong>request logs</strong> that include the network address of the request and the path requested. Secrets such as download links are removed from the log lines. We keep these logs for up to 30 days.</li>
   <li>When you join a game server, the server sees your network address, your callsign and your account identifier. A dedicated server asks our service to confirm which account sits in which seat, so that matches are credited to the right people; that confirmation is held in memory for up to 12 hours.</li>
   <li>The list of running game servers is held in memory and contains no personal data about players.</li>
+  <li><strong>Removing and banning players (from version 1.99.5).</strong> A server's operator can remove a player from a game, or ban them for a time or for good. A ban is kept in a small file on that game server: the player's account identifier (if they were signed in), a <strong>scrambled (salted, one-way) form of their network address</strong> from which the address cannot be read back, the callsign they had, the reason the operator typed, who banned them and the dates. The address itself is not written down. It is used only to turn the same person away. It is deleted when the ban ends, or when the operator lifts it.</li>
 </ul>
 
 <h3>7. On your computer</h3>
@@ -101,6 +102,7 @@
     <tr><td>Sign-in sessions</td><td>Up to 30 days each</td></tr>
     <tr><td>Download tickets</td><td>Record kept; network address blanked after 30 days</td></tr>
     <tr><td>Request logs</td><td>Up to 30 days</td></tr>
+    <tr><td>Game server ban lists</td><td>Until the ban ends or the operator lifts it; permanent bans until the operator removes them. Only a scrambled form of the network address is kept.</td></tr>
     <tr><td>Bug reports</td><td>Our record of a report is anonymised when the account is deleted. The copy in Discord stays until our team deletes it.</td></tr>
     <tr><td>Backups</td><td>Copies of the account database: at most 30 days.</td></tr>
   </tbody>
